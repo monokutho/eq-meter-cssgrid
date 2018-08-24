@@ -1,0 +1,29 @@
+:root {
+  --grid-columns: 32;
+  --grid-rows: 48;
+  --row-gap: 1px;
+}
+
+/* Esta primera es muy importante, 100vh se calculan sin sumar margen padding etc... por defecto
+muchos elementos vienen con algunos de estos valores. De esta forma 100vh es 100% del viewport */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  box-sizing: border-box;
+  background-color: black
+}
+
+#base-container {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  grid-template-rows: repeat(var(--grid-rows), 2vh);
+  width: 100%;
+}
+
+.boxes {
+  margin: 2px;
+}
